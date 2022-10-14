@@ -10,7 +10,7 @@ import requests
 from bs4 import BeautifulSoup
 
 #Netflix data scraping
-url = "https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-PY0220EN-SkillsNetwork/labs/project/netflix_data_webpage.html"
+url = "https://finance.yahoo.com/quote/NFLX/history?p=NFLX"
 
 data  = requests.get(url).text
 
