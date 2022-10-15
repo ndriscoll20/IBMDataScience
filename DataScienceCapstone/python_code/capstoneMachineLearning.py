@@ -2,7 +2,7 @@
 """
 Created on Wed Oct 12 10:35:46 2022
 
-@author: 1109336
+@author: Nick
 """
 import pandas as pd
 import numpy as np
@@ -27,8 +27,9 @@ def plot_confusion_matrix(y,y_predict):
     ax.set_ylabel('True labels')
     ax.set_title('Confusion Matrix'); 
     ax.xaxis.set_ticklabels(['did not land', 'land']); ax.yaxis.set_ticklabels(['did not land', 'landed'])
+    plt.show()
     
-path = r'C:\Users\1109336\Documents\Python\Coursera\DataScienceCapstone'
+path = r'C:\Users\Nick\Documents\Python\Coursera\IBMDataScience\DataScienceCapstone\python_code'
 data = pd.read_csv(path+'\dataset_part_2.csv')
 X = pd.read_csv(path+'\dataset_part_3.csv')
 
@@ -50,11 +51,13 @@ print('(LR) Tuned hyperparameters (best parameters): ', logreg_cv.best_params_)
 print('(LR) Accuracy :', logreg_cv.best_score_)
 print('(LR) Test Data Acuracy: ', logreg_cv.score(X_test, Y_test))
 
+logreg_acc= logreg_cv.score(X_test, Y_test)
+
 yhat = logreg_cv.predict(X_test)
 plot_confusion_matrix(Y_test, yhat)
 
 # SVM GridSearchCV
-parameters_svm = {'kernal':('linear','rbf','poly','sigmoid'),
+parameters_svm = {'kernel':('linear','rbf','poly','sigmoid'),
               'C': np.logspace(-3, 3, 5),
               'gamma': np.logspace(-3, 3, 5)}
 svm = SVC()
@@ -64,6 +67,8 @@ svm_cv.fit(X_train, Y_train)
 print('(SVM) Tuned hyperparameters (best parameters): ', svm_cv.best_params_)
 print('(SVM) Accuracy :', svm_cv.best_score_)
 print('(SVM) Test Data Acuracy: ', svm_cv.score(X_test, Y_test))
+
+svm_acc = svm_cv.score(X_test, Y_test)
 
 yhat_svm = svm_cv.predict(X_test)
 plot_confusion_matrix(Y_test, yhat_svm)
@@ -84,6 +89,8 @@ print('(Tree) Tuned hyperparameters (best parameters): ', tree_cv.best_params_)
 print('(Tree) Accuracy :', tree_cv.best_score_)
 print('(Tree) Test Data Acuracy: ', tree_cv.score(X_test, Y_test))
 
+tree_acc = tree_cv.score(X_test, Y_test)
+
 yhat_tree = tree_cv.predict(X_test)
 plot_confusion_matrix(Y_test, yhat_tree)
 
@@ -99,6 +106,16 @@ print('(KNN) Tuned hyperparameters (best parameters): ', knn_cv.best_params_)
 print('(KNN) Accuracy :', knn_cv.best_score_)
 print('(KNN) Test Data Acuracy: ', knn_cv.score(X_test, Y_test))
 
+knn_acc = knn_cv.score(X_test, Y_test)
+
 yhat_knn = knn_cv.predict(X_test)
 plot_confusion_matrix(Y_test, yhat_knn)
 
+names = ['Logistic Reg','SVM', 'Decision Tree','KNN']
+acc_pct = [logreg_acc*100, svm_acc*100, tree_acc*100, knn_acc*100]
+
+plt.bar(names, acc_pct)
+plt.xlabel('Classification Model')
+plt.ylabel('Model Accuracay (%)')
+plt.title('Classification Model Accuracy')
+# plt.show()

@@ -2,7 +2,7 @@
 """
 Created on Thu Oct  6 11:59:05 2022
 
-@author: 1109336
+@author: Nick
 """
 import sys
 import requests

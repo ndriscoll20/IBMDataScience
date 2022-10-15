@@ -2,12 +2,12 @@
 """
 Created on Thu Oct  6 14:13:43 2022
 
-@author: 1109336
+@author: Nick
 """
 import pandas as pd
 import numpy as np
 
-path = r'C:\Users\1109336\Documents\Python\Coursera\DataScienceCapstone\dataset_part_1.csv'
+path = r'C:\Users\Nick\Documents\Python\Coursera\DataScienceCapstone\dataset_part_1.csv'
 df = pd.read_csv(path)
 
 print(df.isnull().sum()/df.count()*100)

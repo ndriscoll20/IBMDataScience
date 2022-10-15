@@ -2,7 +2,7 @@
 """
 Created on Tue Oct 11 16:22:24 2022
 
-@author: 1109336
+@author: Nick
 """
 # Import required libraries
 import pandas as pd

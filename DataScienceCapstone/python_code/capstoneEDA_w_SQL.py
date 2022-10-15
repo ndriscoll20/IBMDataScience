@@ -2,7 +2,7 @@
 """
 Created on Thu Oct  6 16:48:17 2022
 
-@author: 1109336
+@author: Nick
 """
 import csv, sqlite3
 import pandas as pd
