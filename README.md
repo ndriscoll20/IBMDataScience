@@ -38,9 +38,22 @@ In the Data Science Capstone Project, I developed an end-to-end Machine Learning
  * Dashboards - Plotly, Dash
 
 ## Python Project for Data Science
+ * Performed webscraping using html requests and beautiful soup to obtain stock data 
+ * Obtained stock data using yFinance
+ * Created a dashboard using plotly
 
 ## Databases and SQL
+ * Basic SQL statements
+ * Create and modify live databases
+ * DDL vs. DML
+ * String patterns, ranges, sorting, ordering, sub- and nested queries
+ * Access, manipulate, and query databases from Python
 
 ## Machine Learning with Python
-
-
+ * Linear, Multiple Linear, Non-Linear, Polynomial Regression
+ * Metrics for Regression models
+ * Classification models: KNN, Decision Trees, Logistic Regression, SVMs
+ * Evaluation of Classification models
+ * Clustring: k-Means, Hierarchical, DBSCAN
+ * Recommender Systems: Content Based, Collaborative Filtering
+ * Final project evaluating the best classifier between KNN, Tree, SVM, and Logistic Regression
