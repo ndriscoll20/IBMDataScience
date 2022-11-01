@@ -1,7 +1,7 @@
 # IBMDataScience
 Repository for Coursera IBM Data Science Professional Certificate
 
-Folders for each module with Python or SQL code
+Folders for each module with Python or SQL code and Jupyter notebooks
 
 ## Data Science Capstone
 In the Data Science Capstone Project, I developed an end-to-end Machine Learning project to predict whether a Space X Falcon 9 First stage would land based on historical data. 
