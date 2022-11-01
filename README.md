@@ -5,8 +5,8 @@ Folders for each module with Python or SQL code and Jupyter notebooks
 
 ## Data Science Capstone
 In the Data Science Capstone Project, I developed an end-to-end Machine Learning project to predict whether a Space X Falcon 9 First stage would land based on historical data. 
- * Data was collected through webscraping Wikipedia and the SpaceX
- * Wrangled Data by cleaning, filtering, and creating a binary landing outcome class
+ * Data was collected through webscraping Wikipedia and the SpaceX API
+ * Wrangled Data by cleaning, filtering, and one-hot-coded a landing outcome class
  * Performed EDA using Visualization, pandas, and SQL
  * Created interactive map-based visuals using Folium
  * Created a Plotly Dash dashboard 
